@@ -2,43 +2,31 @@
 <html>
 <head>
 <body style="background-color:grey;">
-<textarea id = "profile_pic" rows = "45" cols "1">
+
+<h1 id = "TitleHeading" align = "center" style = "font-family:Impact"> 
+  Meet My Professor! 
+</h1> 
 
 
 
-</textarea>
-
-<textarea id = "silabas" rows = "20" cols "40">
-
-</textarea>
-
-<textarea id = "comments" rows = "20" cols "40">
 
 </textarea>
+
 <link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
 <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
 <meta charset=utf-8 />
-<title>JS Bin</title>
+<title>Meet My Professor</title>
 <!--[if IE]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
-<style>
-  article, aside, figure, footer, header, hgroup, 
-  menu, nav, section { display: block; }
-</style>
-</head>
-<body>
-  <input type='file' onchange="readURL(this);" />
-    <img id="blah" src="#" alt="your image" />
-	
 <script>
 function readURL(input) {
         if (input.files && input.files[0]) {
             var reader = new FileReader();
 
             reader.onload = function (e) {
-                $('#blah')
+                $('#readFile')
                     .attr('src', e.target.result)
                     .width(150)
                     .height(200);
@@ -48,5 +36,18 @@ function readURL(input) {
         }
     }
 </script>
+
+<style>
+  article, aside, figure, footer, header, hgroup, 
+  menu, nav, section { display: block; }
+</style>
+<head>
+<body>
+  
+  <input type='file' onclick="style.display = 'none'" onchange="readURL(this);" />
+  <img id="readFile" src="#" alt="your image" />
+  <textarea id = "comments" rows = "20" cols "40">
+
+
 </body>
 </html>
